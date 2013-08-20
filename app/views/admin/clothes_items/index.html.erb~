@@ -1,0 +1,4 @@
+<h2>Clothes creation</h2>
+
+
+<%= link_to "Add clothes", new_admin_clothes_item_path %>

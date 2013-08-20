@@ -1,0 +1,5 @@
+class AddResultToWeaponsItem < ActiveRecord::Migration
+  def change
+    add_column :weapons_items, :result, :integer
+  end
+end

@@ -1,0 +1,4 @@
+<h2> <%= @weapon.name %></h2>
+
+<%= link_to "Edit weapons", [:edit, :admin, @weapon] %>
+<%= link_to "Delete weapon", [:admin, @weapon], method: :delete, :confirm: "Are you sure?" %>

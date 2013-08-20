@@ -1,0 +1,8 @@
+<h2>Weapons</h2>
+
+<% @weapons_items.each do |w| %>
+<%= link_to w.name, [:admin, w] %>
+<% end %>
+
+<%= link_to "Add weapon", new_admin_weapons_item_path %>
+

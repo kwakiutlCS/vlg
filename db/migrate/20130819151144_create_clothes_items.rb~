@@ -1,0 +1,19 @@
+class CreateClothesItems < ActiveRecord::Migration
+  def change
+    create_table :clothes_items do |t|
+      t.string :name
+      t.integer :mass
+      t.integer :moral
+      t.string :decay
+      t.integer :decay_days
+      t.integer :quality
+      t.text :assemble
+      t.string :workshop
+      t.text :assemble_skills
+      t.string :tools_assemble_skills
+      t.integer :result
+
+      t.timestamps
+    end
+  end
+end

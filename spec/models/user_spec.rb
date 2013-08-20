@@ -1,0 +1,31 @@
+require 'spec_helper'
+include Devise::TestHelpers
+
+describe User do
+  let(:user) {User.new(name: "palerma", password: "123456", email:"l@l.pt")}
+  
+
+  it "should have a name" do
+    user.name = ""
+    user.should_not be_valid
+  end
+  
+  it "should have an email" do 
+    user.email = ""
+    user.should_not be_valid
+  end
+    
+  it {should_not be_admin}
+
+  it "should have a unique name" do
+    user.save
+    other = User.new(name: "palerma", password: "123456", email:"a@l.pt")
+    other.should_not be_valid
+  end
+
+  it "should have a unique email" do
+    user.save
+    other = User.new(name: "palerm3a", password: "123456", email:"l@l.pt")
+    other.should_not be_valid
+  end
+end

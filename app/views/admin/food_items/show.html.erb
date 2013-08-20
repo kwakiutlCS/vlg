@@ -1,0 +1,4 @@
+<h2><%= @food_item.name %></h2>
+
+<%= link_to "Edit Food item",[:edit, :admin, @food_item] %>
+<%= link_to "Delete Food item", [:admin, @food_item], method: :delete, confirm: "Are you sure?" %>

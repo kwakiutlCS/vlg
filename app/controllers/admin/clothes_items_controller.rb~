@@ -1,0 +1,37 @@
+class Admin::ClothesItemsController < ApplicationController
+
+  def index
+    @clothes = ClothesItem.all
+  end
+
+
+  def new
+    @cloth = ClothesItem.new
+  end
+
+
+  def create
+    @cloth = ClothesItem.new(params[:clothes_item])
+    if @cloth.save
+      flash[:notice] = "New item created"
+      redirect_to :admin_clothes_items
+    else
+      flash[:alert] = "Item couldn't be created"
+      render :new
+    end
+  end
+
+  def edit
+  end
+
+  def update
+  end
+
+  def show
+  end
+
+  def destroy
+  end
+
+
+end

@@ -1,0 +1,6 @@
+<% @food_items.each do |f| %>
+<p><%= link_to f.name, [:admin, f] %></p>
+<% end %>
+
+<br />
+<%= link_to "Add food item", new_admin_food_item_path %>

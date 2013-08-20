@@ -1,0 +1,5 @@
+<h2><% @cloth.name %></h2>
+
+
+<%= link_to "Edit clothes", [:edit, :admin, @cloth] %>
+<%= link_to "Delete clothes", [:admin, @cloth], method: :delete, confirm: "Are you sure?" %>

@@ -1,0 +1,7 @@
+FactoryGirl.define do
+  factory :user do |f|
+    f.name "palerma"
+    f.email "j@j.pt"
+    f.password "password"
+  end
+end

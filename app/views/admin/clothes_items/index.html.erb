@@ -1,0 +1,10 @@
+<h2>Clothes creation</h2>
+
+
+
+<ul>
+<% @clothes.each do |c| %>
+  <li><%= link_to c.name, [:admin,c] %></li>
+<% end %>
+</ul>
+<%= link_to "Add clothes", new_admin_clothes_item_path %>

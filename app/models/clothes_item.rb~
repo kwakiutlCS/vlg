@@ -1,0 +1,3 @@
+class ClothesItem < ActiveRecord::Base
+  attr_accessible :assemble, :assemble_skills, :decay, :decay_days, :mass, :moral, :name, :quality, :result, :tools_assemble_skills, :workshop
+end

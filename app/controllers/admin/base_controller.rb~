@@ -1,0 +1,12 @@
+class Admin::BaseController < ApplicationController
+
+  before_filter :authenticate_admin!
+
+
+  def authenticate_admin!
+    if !current_user.try(:admin?)
+      flash[:alert] = "You need to be an admin to access that"
+      redirect_to root_page
+    end
+  end
+end

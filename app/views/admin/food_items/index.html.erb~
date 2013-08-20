@@ -1,0 +1,1 @@
+<%= link_to "Add food item", new_admin_food_item_path %>

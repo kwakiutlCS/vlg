@@ -1,0 +1,37 @@
+require 'spec_helper'
+
+describe ClothesItem do
+  let(:shirt) {FactoryGirl.create(:clothes_item)}
+
+  it "should have a name" do
+    shirt.name = ""
+    shirt.should_not be_valid
+  end
+
+  it "should have a positive mass" do
+    shirt.mass = 0
+    shirt.should_not be_valid
+  end
+
+  it "should have a unique name" do
+    trousers = FactoryGirl.create(:clothes_item)
+    trousers.should_not be_valid
+  end
+
+  it "should have decay_days positive" do
+    shirt.decay_days = -2
+    shirt.should_not be_valid
+  end
+
+  it "should have quality positive" do
+    shirt.quality = -2
+    shirt.should_not be_valid
+  end
+
+  it "should have result positive" do
+    shirt.result = 0
+    shirt.should_not be_valid
+  end
+
+  
+end

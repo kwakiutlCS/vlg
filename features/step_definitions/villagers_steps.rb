@@ -1,0 +1,27 @@
+Given(/^I am on the home\s?page$/) do
+  visit root_path
+end
+
+
+Given(/^the following users exist:$/) do |table|
+  table.hashes.each do |attributes|
+    admin = attributes.delete("admin") == "true"
+    user = User.new(attributes)
+    user.admin = admin
+    user.save
+    
+  end
+end
+
+
+Given(/^I am signed in as "(.*?)"$/) do |arg1|
+  
+  steps %Q{
+      Given I am on the homepage
+      And I follow "Sign in"
+      And I fill in "Name" with "#{arg1}"
+      And I fill in "Password" with "password"
+      And I press "Sign in"
+     }
+      
+end

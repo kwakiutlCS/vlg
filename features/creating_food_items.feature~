@@ -1,0 +1,23 @@
+Feature: In order to be able to eat
+	  As an admin
+	  I want to be able to create food items through the interface
+
+
+	  Background:
+	  Given the following users exist:
+	  |name | email | password |admin|
+	  |admin| admin@p.pt| password | true |
+	  |palerma | p@p.pt |password | false |
+	  
+	  
+
+	  Scenario: Create food item as admin
+	  And I am signed in as "admin"
+	  Given I am on the homepage
+	  And I follow "Admin"
+	  Then I should see "Add food item"
+
+	  Scenario: create food standard user
+	  And I am signed in as "palerma"
+	  Given I am on the homepage
+	  Then I should not see "Admin"

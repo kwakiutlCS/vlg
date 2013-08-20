@@ -1,0 +1,15 @@
+<h2>Admin Control</h2>
+
+<ul>
+  <li><%= link_to "Food items", admin_food_items_path %></li>
+
+  <li><%= link_to "Clothes", admin_clothes_items_path %></li>
+
+  <li><%= link_to "Food items", admin_food_items_path %></li>
+  
+  <li><%= link_to "Food items", admin_food_items_path %></li>
+
+  <li><%= link_to "Food items", admin_food_items_path %></li>
+
+  <li><%= link_to "Food items", admin_food_items_path %></li>
+</lu>

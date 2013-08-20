@@ -1,0 +1,7 @@
+Feature:
+	 In order to enjoy the website
+	 As anyone
+	 I want to be able to sign up
+
+	 Scenario:
+	 Given I am on the home page
