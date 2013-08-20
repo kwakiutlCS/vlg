@@ -1,0 +1,9 @@
+class RenameStrColumnInFoodItem < ActiveRecord::Migration
+  def up
+    remove_column :food_item, :dex
+    rename_column :food_item, :str, :con
+  end
+
+  def down
+  end
+end

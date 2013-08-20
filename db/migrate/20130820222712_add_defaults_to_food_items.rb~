@@ -1,0 +1,4 @@
+class AddDefaultsToFoodItems < ActiveRecord::Migration
+  def change
+  end
+end

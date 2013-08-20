@@ -4,13 +4,13 @@ FactoryGirl.define do
     mass 2
     hunger 0
     moral -1
-    str 0
+    con 0
     int 0
     cha 0
-    dex 1
+    
     decay "stale"
     decay_probability 90
-    assemble ""
+    assemble "{flour: 3}"
     workshop "jkalsf"
     assemble_skills ""
     tools ""

@@ -1,5 +1,5 @@
 class FoodItem < ActiveRecord::Base
-  attr_accessible :cha, :dex, :hunger, :int, :mass, :moral, :name, :str, :decay, :decay_probability, :assemble, :workshop, :result, :assemble_skills, :tools
+  attr_accessible :cha, :hunger, :int, :mass, :moral, :name, :con, :decay, :decay_probability, :assemble, :workshop, :result, :assemble_skills, :tools
 
   before_validation :convert_hash
 
