@@ -8,7 +8,6 @@ FactoryGirl.define do
     mass 2
     moral -1
     decay "stale"
-    quality 90
     assemble ""
     workshop "jkalsf"
     assemble_skills ""

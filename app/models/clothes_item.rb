@@ -1,12 +1,11 @@
 class ClothesItem < ActiveRecord::Base
-  attr_accessible :assemble, :assemble_skills, :decay, :decay_days, :mass, :moral, :name, :quality, :result, :tools, :workshop
+  attr_accessible :assemble, :assemble_skills, :decay, :decay_days, :mass, :moral, :name,  :result, :tools, :workshop
 
   before_validation :convert_hash
 
 
   validates :name, uniqueness: true, length: {minimum: 3}, presence: true
   validates :mass, numericality: {greater_than: 0}
-  validates :quality, numericality: {greater_than_or_equal_to: 0}
   validates :decay_days, numericality: {greater_than: 0}
   validates :result, numericality: {greater_than: 0} 
 

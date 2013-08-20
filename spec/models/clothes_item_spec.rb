@@ -27,10 +27,7 @@ describe ClothesItem do
     shirt.should_not be_valid
   end
 
-  it "should have quality positive" do
-    shirt.quality = -2
-    shirt.should_not be_valid
-  end
+  
 
   it "should have result positive" do
     shirt.result = 0

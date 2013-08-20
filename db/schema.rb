@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130820224005) do
+ActiveRecord::Schema.define(:version => 20130820225004) do
 
   create_table "armours_items", :force => true do |t|
     t.string   "name"
@@ -34,14 +34,13 @@ ActiveRecord::Schema.define(:version => 20130820224005) do
     t.integer  "moral",           :default => 0
     t.string   "decay",           :default => ""
     t.integer  "decay_days",      :default => 100
-    t.integer  "quality",         :default => 0
-    t.text     "assemble",        :default => "'--- {}\n'"
+    t.text     "assemble",        :default => "{}"
     t.string   "workshop",        :default => "weaver"
-    t.text     "assemble_skills", :default => "'--- {}\n'"
-    t.text     "tools",           :default => "'--- {}\n'"
+    t.text     "assemble_skills", :default => "{}"
+    t.text     "tools",           :default => "{}"
     t.integer  "result",          :default => 1
-    t.datetime "created_at",                                :null => false
-    t.datetime "updated_at",                                :null => false
+    t.datetime "created_at",                            :null => false
+    t.datetime "updated_at",                            :null => false
   end
 
   create_table "food_items", :force => true do |t|
