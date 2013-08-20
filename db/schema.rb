@@ -11,7 +11,22 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130820145718) do
+ActiveRecord::Schema.define(:version => 20130820175752) do
+
+  create_table "armours_items", :force => true do |t|
+    t.string   "name"
+    t.integer  "mass"
+    t.string   "decay"
+    t.integer  "decay_days"
+    t.integer  "quality"
+    t.text     "assemble"
+    t.string   "workshop"
+    t.text     "assemble_skills"
+    t.text     "tools"
+    t.integer  "result"
+    t.datetime "created_at",      :null => false
+    t.datetime "updated_at",      :null => false
+  end
 
   create_table "clothes_items", :force => true do |t|
     t.string   "name"

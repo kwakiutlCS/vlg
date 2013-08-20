@@ -1,0 +1,67 @@
+<%= form_for [:admin, @armour] do |f| %>
+
+<% @armour.errors.full_messages.each do |msg| %>
+<%= msg %><br />
+<% end %>
+
+
+<p>
+  <%= f.label :name %>
+  <%= f.text_field :name %>
+</p>
+
+<p>
+  <%= f.label :mass %>
+  <%= f.number_field :mass %>
+</p>
+
+
+
+<p>
+  <%= f.label :decay %>
+  <%= f.text_field :decay %>
+</p>
+
+<p>
+  <%= f.label :decay_days %>
+  <%= f.number_field :decay_days %>
+</p>
+
+<p>
+  <%= f.label :quality %>
+  <%= f.number_field :quality %>
+</p>
+
+<p>
+  <%= f.label :assemble %>
+  <%= f.text_area :assemble %>
+</p>
+
+<p>
+  <%= f.label :tools %>
+  <%= f.text_area :tools %>
+</p>
+
+<p>
+  <%= f.label :assemble_skills %>
+  <%= f.text_area :assemble_skills %>
+</p>
+
+<p>
+  <%= f.label :workshop %>
+  <%= f.text_field :workshop %>
+</p>
+
+<p>
+  <%= f.label :result %>
+  <%= f.number_field :result %>
+</p>
+
+
+
+
+
+
+<%= f.submit %>
+
+<% end %>

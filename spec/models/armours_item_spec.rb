@@ -1,0 +1,68 @@
+require 'spec_helper'
+
+describe ArmoursItem do
+  let(:helmet) {FactoryGirl.create(:armours_item)}
+
+  it "can't have a blank name" do
+    helmet.name = ""
+    helmet.should_not be_valid
+  end
+
+  it "should have a unique name" do
+    helmet.name = "helmet"
+    helmet.save
+    shield = FactoryGirl.create(:armours_item)
+    shield.name = "helmet"
+    shield.should_not be_valid
+  end
+
+  it "should have a positive mass" do
+    helmet.mass = 0
+    helmet.should_not be_valid
+  end
+  
+  it "should have non negative quality" do
+    helmet.quality = -2
+    helmet.should_not be_valid
+  end
+
+  describe "it should have an hash for assemble" do
+    it "when receiving a string" do
+      helmet.assemble = "{w: 3, ter: 4, g:53}"
+      helmet.save
+      helmet.assemble[:g].should == 53
+    end
+    it "when receiving an hash" do
+      helmet.assemble = {w: 3, ter: 4, g:53}
+      helmet.save
+      helmet.assemble[:g].should == 53
+    end
+
+    describe "it should have an hash for tools" do
+      it "when receiving a string" do
+        helmet.tools = "{w: 3, ter: 4, g:53}"
+        helmet.save
+        helmet.tools[:g].should == 53
+      end
+      it "when receiving an hash" do
+        helmet.tools = {w: 3, ter: 4, g:53}
+        helmet.save
+        helmet.tools[:g].should == 53
+      end
+    end
+
+    describe "it should have an hash for assemble_skills" do
+      it "when receiving a string" do
+        helmet.assemble_skills = "{w: 3, ter: 4, g:53}"
+        helmet.save
+        helmet.assemble_skills[:g].should == 53
+      end
+      it "when receiving an hash" do
+        helmet.assemble_skills = {w: 3, ter: 4, g:53}
+        helmet.save
+        helmet.assemble_skills[:g].should == 53
+      end
+    end
+  
+  end
+end

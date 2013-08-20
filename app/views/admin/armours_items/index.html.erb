@@ -1,0 +1,11 @@
+<h2>Armour</h2>
+
+<ul>
+<% @armours.each do |a| %>
+<li><%= link_to a.name, [:admin, a] %></li>
+<% end %>
+</ul>
+
+<%= link_to "Add armour", new_admin_armours_item_path %>
+
+

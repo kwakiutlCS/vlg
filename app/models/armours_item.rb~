@@ -1,0 +1,6 @@
+class ArmoursItem < ActiveRecord::Base
+  attr_accessible :assemble, :assemble_skills, :decay, :decay_days, :mass, :name, :quality, :result, :tools, :workshop
+
+  validates :name, presence:  true, uniqueness: true, length: {minimum: 3}
+  validates :quality, numericality: {greater_than_or_equal_to: 0}
+end

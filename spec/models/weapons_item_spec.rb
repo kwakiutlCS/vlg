@@ -16,6 +16,11 @@ describe WeaponsItem do
     axe.should_not be_valid
   end
 
+  it "should have a positive mass" do
+    sword.mass = 0
+    sword.should_not be_valid
+  end
+
   it "should have a skill" do
     sword.skill = ""
     sword.should_not be_valid
