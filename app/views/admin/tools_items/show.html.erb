@@ -1,0 +1,4 @@
+<h2> <%= @tool.name %> </h2>
+
+<%= link_to "Edit tool", [:edit, :admin, @tool] %>
+<%= link_to "Delete tool", [:admin, @tool], method: :delete, confirm: "Are you sure?" %>

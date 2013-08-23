@@ -1,0 +1,3 @@
+
+
+<%= link_to "Add tool", new_admin_tools_item_path %>

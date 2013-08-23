@@ -1,0 +1,3 @@
+class ToolsItem < ActiveRecord::Base
+  attr_accessible :assemble, :assemble_skills, :decay, :mass, :name, :result, :tools, :workshop
+end

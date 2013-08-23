@@ -1,0 +1,7 @@
+<h2>Tools</h2>
+
+<% @tools.each do |t| %>
+<%= link_to t.name, [:admin, t] %>
+<% end %>
+
+<%= link_to "Add tool", new_admin_tools_item_path %>
