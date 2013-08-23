@@ -22,12 +22,7 @@ describe ClothesItem do
     
   end
 
-  it "should have decay_days positive" do
-    shirt.decay_days = -2
-    shirt.should_not be_valid
-  end
-
-  
+   
 
   it "should have result positive" do
     shirt.result = 0
