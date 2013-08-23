@@ -22,7 +22,10 @@ describe ClothesItem do
     
   end
 
-   
+  it "should have a function" do
+    shirt.function = ""
+    shirt.should_not be_valid
+  end 
 
   it "should have result positive" do
     shirt.result = 0

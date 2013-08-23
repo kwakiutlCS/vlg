@@ -20,6 +20,7 @@ Feature: In order to be able to get dressed
 	  And I fill in "Mass" with "1"
 	  And I fill in "Moral" with "1"
 	  And I fill in "Decay" with "rags"
+	  And I fill in "Function" with "torso"
 	  And I fill in "Assemble" with "{wool: 3}"
 	  And I fill in "Tools" with "{needle: 1}"
 	  And I fill in "Assemble skills" with "{weaver: 10}"

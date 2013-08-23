@@ -26,7 +26,10 @@ describe WeaponsItem do
     sword.should_not be_valid
   end
 
-  
+  it "can't have a blank function" do
+    sword.function = ""
+    sword.should_not be_valid
+  end
 
   describe "it should have an hash for assemble" do
     it "when receiving a string" do

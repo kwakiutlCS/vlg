@@ -1,7 +1,7 @@
 class ClothesItem < ActiveRecord::Base
   include Conversion
   
-  attr_accessible :assemble, :assemble_skills, :decay,  :mass, :moral, :name,  :result, :tools, :workshop
+  attr_accessible :assemble, :assemble_skills, :decay,  :mass, :moral, :name,  :result, :tools, :workshop, :function
 
   before_validation :convert_hash
 
@@ -9,6 +9,7 @@ class ClothesItem < ActiveRecord::Base
   validates :name, uniqueness: true, length: {minimum: 3}, presence: true
   validates :mass, numericality: {greater_than: 0}
   validates :result, numericality: {greater_than: 0} 
+  validates :function, presence: true
 
 
   serialize :assemble, Hash

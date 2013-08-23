@@ -19,6 +19,7 @@ Feature: In order to be able to not be killer
 	  And I fill in "Name" with "helmet"
 	  And I fill in "Mass" with "1"
 	  And I fill in "Decay" with "sword"
+	  And I fill in "Function" with "torso"
 	  And I fill in "Assemble" with "{wood: 3}"
 	  And I fill in "Tools" with "{hammer: 1}"
 	  And I fill in "Assemble skills" with "{smithing: 10}"

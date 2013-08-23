@@ -20,6 +20,7 @@ Feature: In order to be able to kill
 	  And I fill in "Mass" with "1"
 	  And I fill in "Skill" with "axeing"
 	  And I fill in "Decay" with "sword"
+	  And I fill in "Function" with "one_hand"
 	  And I fill in "Assemble" with "{wood: 3}"
 	  And I fill in "Tools" with "{hammer: 1}"
 	  And I fill in "Assemble skills" with "{smithing: 10}"

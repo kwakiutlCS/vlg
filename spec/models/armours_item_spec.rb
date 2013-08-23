@@ -21,7 +21,10 @@ describe ArmoursItem do
     helmet.should_not be_valid
   end
   
-  
+  it "can't have a blank function" do
+    helmet.function = ""
+    helmet.should_not be_valid
+  end
 
   describe "it should have an hash for assemble" do
     it "when receiving a string" do

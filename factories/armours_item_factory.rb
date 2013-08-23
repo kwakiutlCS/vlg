@@ -4,6 +4,7 @@ FactoryGirl.define do
     name
     mass 2
     decay "stale"
+    function "torso"
     assemble "{steel: 3}"
     workshop "jkalsf"
     assemble_skills ""
