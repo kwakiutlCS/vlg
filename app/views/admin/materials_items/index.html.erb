@@ -1,0 +1,9 @@
+<h2>Materials</h2>
+
+<% @materials.each do |m| %>
+
+<%= link_to m.name, [:admin, m] %>
+
+<% end %>
+
+<%= link_to "Add material", new_admin_materials_item_path %>

@@ -1,0 +1,3 @@
+class MaterialsItem < ActiveRecord::Base
+  attr_accessible :decay, :decay_probability, :function, :mass, :name, :quality
+end

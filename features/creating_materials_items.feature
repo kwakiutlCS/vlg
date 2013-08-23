@@ -1,0 +1,43 @@
+Feature: In order to be able to have raw materials   
+	  As an admin
+	  I want to be able to create material items through the interface
+
+
+	  Background:
+	  Given the following users exist:
+	  |name | email | password |admin|
+	  |admin| admin@p.pt| password | true |
+	  |palerma | p@p.pt |password | false |
+	  
+	  
+
+	  Scenario: Create raw materials item as admin
+	  And I am signed in as "admin"
+	  And I follow "Admin"
+	  And I follow "Materials"
+	  And I follow "Add material"
+	  And I fill in "Name" with "clay"
+	  And I fill in "Mass" with "1"
+	  And I fill in "Decay" with ""
+	  And I fill in "Decay probability" with "0"
+	  And I fill in "Quality" with "1"
+	  And I fill in "Function" with "1"
+	  And I press "Create Materials item"
+	  Then I should see "New item created"
+	  And I should see "clay"
+	  
+	  
+	  Scenario: Create raw materials item as admin wrong parameters
+	  And I am signed in as "admin"
+	  And I follow "Admin"
+	  And I follow "Materials"
+	  And I follow "Add material"
+	  And I fill in "Name" with ""
+	  And I fill in "Mass" with "1"
+	  And I fill in "Decay" with ""
+	  And I fill in "Decay probability" with "0"
+	  And I fill in "Quality" with "1"
+	  And I fill in "Function" with "1"
+	  And I press "Create Materials item"
+	  Then I should see "Item couldn't be created"
+	  

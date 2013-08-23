@@ -1,0 +1,14 @@
+class CreateMaterialsItems < ActiveRecord::Migration
+  def change
+    create_table :materials_items do |t|
+      t.string :name
+      t.integer :mass
+      t.string :decay
+      t.integer :decay_probability
+      t.string :function
+      t.integer :quality
+
+      t.timestamps
+    end
+  end
+end
