@@ -26,10 +26,7 @@ describe WeaponsItem do
     sword.should_not be_valid
   end
 
-  it "should have non negative quality" do
-    sword.quality = -2
-    sword.should_not be_valid
-  end
+  
 
   describe "it should have an hash for assemble" do
     it "when receiving a string" do

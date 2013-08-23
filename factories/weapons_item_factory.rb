@@ -5,7 +5,6 @@ FactoryGirl.define do
     mass 2
     skill "onal"
     decay "stale"
-    quality 90
     assemble "{steel: 3}"
     workshop "jkalsf"
     assemble_skills ""
