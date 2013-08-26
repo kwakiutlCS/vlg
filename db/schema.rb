@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130823144015) do
+ActiveRecord::Schema.define(:version => 20130826162505) do
 
   create_table "armours_items", :force => true do |t|
     t.string   "name"
@@ -61,6 +61,13 @@ ActiveRecord::Schema.define(:version => 20130823144015) do
     t.integer  "result",            :default => 1
   end
 
+  create_table "inventories", :force => true do |t|
+    t.integer  "user_id"
+    t.integer  "bread",      :default => 0
+    t.datetime "created_at",                :null => false
+    t.datetime "updated_at",                :null => false
+  end
+
   create_table "materials_items", :force => true do |t|
     t.string   "name"
     t.integer  "mass",              :default => 1
@@ -70,6 +77,20 @@ ActiveRecord::Schema.define(:version => 20130823144015) do
     t.integer  "quality",           :default => 0
     t.datetime "created_at",                       :null => false
     t.datetime "updated_at",                       :null => false
+  end
+
+  create_table "stats", :force => true do |t|
+    t.integer  "user_id"
+    t.integer  "str",        :default => 0
+    t.integer  "int",        :default => 0
+    t.integer  "con",        :default => 0
+    t.integer  "cha",        :default => 0
+    t.integer  "dex",        :default => 0
+    t.integer  "hunger",     :default => 30
+    t.integer  "moral",      :default => 50
+    t.integer  "health",     :default => 100
+    t.datetime "created_at",                  :null => false
+    t.datetime "updated_at",                  :null => false
   end
 
   create_table "tools_items", :force => true do |t|

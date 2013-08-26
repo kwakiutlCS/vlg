@@ -32,6 +32,10 @@ group :test do
       gem 'capybara'
       gem 'database_cleaner'
       gem 'factory_girl_rails'
+      gem 'guard-rspec'
+      gem 'spork', '>0.9.0.rc'
+      gem 'guard-spork'
+      gem 'childprocess', '0.3.6'
 end
 
 gem 'devise', '~> 1.4.3'

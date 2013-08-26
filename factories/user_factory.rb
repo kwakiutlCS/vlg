@@ -3,5 +3,8 @@ FactoryGirl.define do
     name "palerma"
     email "j@j.pt"
     password "password"
+
+
+    
   end
 end

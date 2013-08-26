@@ -1,0 +1,11 @@
+require 'spec_helper'
+ 
+describe Stat do
+  let(:user) {FactoryGirl.create(:user)}
+  
+  describe "initial conditions" do
+    it "should have 0 str" do
+      user.stat.should == 0
+    end
+  end
+end
