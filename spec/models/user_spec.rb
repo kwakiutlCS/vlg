@@ -37,10 +37,49 @@ describe User do
 
   describe "eating" do
     it "should decrease the object quantity" do
-      user.inventory.should_receive(:remove).with("bread", 1).and_return(2)
       user.inventory.bread = 3
-      user.eat(:bread)
+      user.eat("bread")
       user.inventory.bread.should == 2
+    end
+
+    it "should diminish hunger level" do
+      FactoryGirl.create(:food_item, name: "bread", hunger: -15)
+      user.inventory.bread = 1
+      user.stat.hunger = 50
+      user.eat("bread")
+      user.stat.hunger.should == 35
+    end
+
+    it "should alter the moral level" do
+      FactoryGirl.create(:food_item, name: "bread", moral: 15)
+      user.inventory.bread = 1
+      user.stat.moral = 50
+      user.eat("bread")
+      user.stat.moral.should == 65
+    end
+
+    it "should alter the CON level" do
+      FactoryGirl.create(:food_item, name: "bread", con: 1)
+      user.inventory.bread = 1
+      user.stat.con = 50
+      user.eat("bread")
+      user.stat.con.should == 51
+    end
+
+    it "should alter the int level" do
+      FactoryGirl.create(:food_item, name: "bread", int: 1)
+      user.inventory.bread = 1
+      user.stat.int = 50
+      user.eat("bread")
+      user.stat.int.should == 51
+    end
+
+    it "should alter the cha level" do
+      FactoryGirl.create(:food_item, name: "bread", cha: 2)
+      user.inventory.bread = 1
+      user.stat.cha = 50
+      user.eat("bread")
+      user.stat.cha.should == 52
     end
   end
 end

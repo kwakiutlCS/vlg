@@ -22,7 +22,18 @@ class User < ActiveRecord::Base
 
 
   def eat(item)
-    self.inventory.remove(item, 1)
+    begin
+      self.inventory.remove(item, 1)
+      food = FoodItem.where(name: item).first
+      self.stat.moral += food.moral
+      self.stat.hunger += food.hunger
+      self.stat.con += food.con
+      self.stat.int += food.int
+      self.stat.cha += food.cha
+      self.save
+    rescue
+      "Not possible"
+    end
   end
 
 
